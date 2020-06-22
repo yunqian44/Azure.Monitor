@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs/Azure.Monitor/v16
+/Azure.Monitor.Application_Insights/bin/Debug/netcoreapp3.1
+/Azure.Monitor.Application_Insights/obj
