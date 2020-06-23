@@ -25,6 +25,23 @@ namespace Azure.Monitor.Application_Insights.Controllers
 
         public IActionResult Privacy()
         {
+            var iteration = 4;
+            _logger.LogDebug($"Debug {iteration}");
+            _logger.LogInformation($"Information {iteration}");
+            _logger.LogWarning($"Warning {iteration}");
+            _logger.LogError($"Error {iteration}");
+            _logger.LogCritical($"Critical {iteration}");
+
+            try
+            {
+                throw new Exception("Hello! This is new a Exception");
+            }
+            catch (Exception ex)
+            {
+
+                _logger.LogError(ex, ex.Message);
+            }
+
             return View();
         }
 
